@@ -28,12 +28,20 @@ function AttendancePage() {
     e.preventDefault();
 
     try {
-      await API.post("/attendance", form);
+      await API.post("/attendance", {
+        ...form,
+        employeeId: Number(form.employeeId),
+      });
+
       fetchAttendance(form.employeeId);
+      alert("Attendance marked successfully");
     } catch (error) {
-      alert(error.response?.data?.message);
+      console.log(error.response);
+      alert("Error marking attendance");
     }
   };
+
+
 
   return (
     <div className="max-w-5xl mx-auto p-8">
