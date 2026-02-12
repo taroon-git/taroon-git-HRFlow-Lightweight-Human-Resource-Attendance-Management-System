@@ -8,8 +8,6 @@ dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
 
-import cors from "cors";
-
 app.use(
   cors({
     origin: [
@@ -22,6 +20,7 @@ app.use(
 );
 
 app.use(express.json());
+
 
 app.get("/", (req, res) => {
   res.json({ message: "HRMS API Running" });
