@@ -139,7 +139,7 @@ This project is licensed under the ISC License.
 
 ## 📞 Contact
 
-Created and maintained by [Taroon](https://github.com/taroon-git)
+Created and maintained by [Tarun kumar](https://github.com/taroon-git)
 
 ---
 
